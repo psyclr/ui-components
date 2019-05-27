@@ -39,6 +39,7 @@ const propTypes = {
   initialStartDate: momentPropTypes.momentObj,
   initialEndDate: momentPropTypes.momentObj,
   onDatesChange: PropTypes.func,
+  selectDefaultValue: PropTypes.string
 };
 
 const withDatePickerFormat = (start, end) => ({
@@ -165,7 +166,7 @@ class DatePicker extends PureComponent {
           </div>
         </StyledDatePicker>
         {selectDates && (
-          <StyledSelect options={selectDates} onChange={this.onSelectChange} />
+          <StyledSelect options={selectDates} defaultValue={this.props.selectDefaultValue} onChange={this.onSelectChange} />
         )}
       </Fragment>
     );

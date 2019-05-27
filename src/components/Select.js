@@ -43,6 +43,7 @@ const Select = ({ className, classNamePrefix, dataCy, ...props }) => {
 
   return (
     <ReactSelect
+      defaultValue={props.defaultValue}
       className={classes}
       optionClassName="select-option"
       classNamePrefix={classNamePrefix}
